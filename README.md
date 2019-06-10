@@ -8,7 +8,7 @@ Built With:
 * CSS3
 
 # GitHub Page
-Live version: 
+Live version: https://abdusaid10.github.io/nytimes_article_page_clone/
 
 # Authors
 * Ar Nazeh https://github.com/Nazeh
