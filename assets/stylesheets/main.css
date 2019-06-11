@@ -580,20 +580,39 @@ body>.subscribe {
 }
 
 /* === */
-
+main section{
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  width: 600px;
+}
 .article {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: blue;
+  
 }
 
 .article-top {
   display: block;
+  margin: 0px 0px 16px;
 }
 
 .published-date-and-icons {
+  background-color: brown;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  align-items: center;
+}
+.sm-icons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  
+}
+.sm-icons div{
+  
 }
 
 
