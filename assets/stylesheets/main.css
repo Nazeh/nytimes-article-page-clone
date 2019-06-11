@@ -555,7 +555,19 @@ body>.subscribe {
 
 /* === */
 
+.article{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.article-top{
+  display: block;
+}
+.published-date-and-icons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 
 
 /* Responsivness media query */
