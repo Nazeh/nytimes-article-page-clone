@@ -400,6 +400,10 @@ template {
   src: url(/assets/fonts/franklin-normal-400.ttf)
 }
 
+@font-face {
+  font-family: nyt-imperial;
+  src: url(/assets/fonts/imperial-normal-500.ttf)
+}
 
 /* ===== */
 
@@ -427,7 +431,7 @@ body>.header {
   border-bottom: 1px solid;
   border-color: rgb(226, 226, 226);
   display: grid;
-  grid-template-columns:auto 1fr auto 1fr auto;
+  grid-template-columns: auto 1fr auto 1fr auto;
   justify-content: space-between;
 }
 
@@ -435,7 +439,8 @@ body>.header {
 .header>div {
   align-content: center
 }
-.header-center{
+
+.header-center {
   grid-column: 3;
 }
 
@@ -444,7 +449,7 @@ body>.header {
   height: 26.5px;
 }
 
-.header-left{
+.header-left {
   grid-column: 2;
   display: flex;
   align-content: center;
@@ -454,7 +459,7 @@ body>.header {
   margin-right: 8px;
 }
 
-.header-left :nth-child(3){
+.header-left :nth-child(3) {
   margin-left: 8px;
 }
 
@@ -466,37 +471,38 @@ body>.header {
   font-family: nyt-franklin-b, helvetica, arial, sans-serif;
 }
 
-.header-left a{
+.header-left a {
   height: 33px;
-  padding:9px;
+  padding: 9px;
   box-sizing: border-box;
 }
 
-.header-left a svg{
+.header-left a svg {
   height: 100%;
 }
 
-.header-right{
+.header-right {
   grid-column: 4;
   display: grid;
   justify-self: right;
 }
 
-.header-right a svg{
+.header-right a svg {
   display: none;
 }
 
-.header-right div span{
+.header-right div span {
   display: none
 }
-.header-right div a{
+
+.header-right div a {
   margin-left: 8px;
   background-color: rgb(98, 136, 165);
   border: 1px solid;
   border-color: rgb(50, 104, 145);
   border-radius: 3px;
   color: white;
-  height:32px;
+  height: 32px;
   padding: 9px 12px;
   box-sizing: border-box;
   font-family: nyt-franklin-b, helvetica, arial, sans-serif;
@@ -533,10 +539,30 @@ header h1 {
 header figure {
   width: 1200px;
   margin: 25px auto 43px auto;
+  font-family: nyt-imperial, georgia, 'times new roman', times, serif;
+  ;
+
 }
 
 header figure img {
   width: 100%;
+}
+
+header figure figcaption {
+  max-width: 720px;
+  margin: 0 0 auto;
+  padding-top: 10px;
+}
+
+header figure figcaption :nth-child(1) {
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+}
+
+header figure figcaption :nth-child(3) {
+  max-width: 700px;
+  color: rgb(136, 136, 136);
+  font-size: 13px;
 }
 
 /* ==== */
@@ -555,16 +581,17 @@ body>.subscribe {
 
 /* === */
 
-.article{
-  width:100%;
+.article {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.article-top{
+.article-top {
   display: block;
 }
-.published-date-and-icons{
+
+.published-date-and-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -580,30 +607,37 @@ body>.subscribe {
 
 }
 
-@media only screen and (max-width: 1150px) {
-
-}
+@media only screen and (max-width: 1150px) {}
 
 @media only screen and (max-width: 1024px) {
-  .header{
-    padding: 10px 15px 6px 15px !important; 
+  body .header {
+    position: relative ;
+    padding: 10px 15px 6px 15px;
   }
-  .header-left a{
-    display:none;
+
+  .header-center a svg {
+    height: 30px;
   }
-  .header-left :nth-child(1){
-    display:inline;
+
+  .header-left a {
+    display: none;
   }
-  
-  .header-right{
+
+  .header-left :nth-child(1) {
+    display: inline;
+  }
+
+  .header-right {
     position: relative;
   }
-  .header-right > a{
+
+  .header-right>a {
     width: 33px;
     display: inline;
     margin-left: auto;
   }
-  .header-right a svg{
+
+  .header-right a svg {
     display: inline;
     box-sizing: border-box;
     height: 33px;
@@ -611,34 +645,60 @@ body>.subscribe {
   }
 
 
-  .header-right div{
-    display: flex;
-    padding: 0 9px;
+  .header-right div {
+    position: absolute;
+    width: 200px;
+    top: 40px;
+    right: 0;
+    text-align: right;
+    padding: 9px;
   }
-  .header-right div span{
+
+  .header-right div span {
     padding: 10px;
     display: inline;
     color: grey;
     font-size: 10px;
   }
 
-  .header-right div a{
+  .header-right div a {
     padding: 0;
-    margin:0;
+    margin: 0;
     padding: 12px 0;
     background-color: transparent;
     border: none;
-    color:rgb(50, 104, 145) ;
+    color: rgb(50, 104, 145);
     font-size: 10px;
     font-family: nyt-franklin, helvetica, arial, sans-serif;
   }
 
 
-  main{
-    padding-top: 53px;
+  main {
+    padding-top: 0;
   }
-  
+
   article header figure {
     width: 100%;
+  }
+
+  article header figure figcaption {
+    margin: 0 20px;
+  }
+
+  article header figure figcaption :nth-child(3) {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  main header h1 {
+    width: auto;
+    margin: 0 20px;
+    font-size: 30px;
+  }
+
+  article header figure figcaption :nth-child(1) {
+    font-size: 14px;
   }
 }
