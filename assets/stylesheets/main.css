@@ -391,13 +391,13 @@ template {
 }
 
 @font-face {
-  font-family: nyt-franklin-b;
-  src: url(/assets/fonts/franklin-normal-700.ttf)
-}
-
-@font-face {
   font-family: nyt-franklin;
   src: url(/assets/fonts/franklin-normal-400.ttf)
+}
+@font-face {
+  font-family: nyt-franklin;;
+  src: url(/assets/fonts/franklin-normal-700.ttf);
+  font-weight: bold
 }
 
 @font-face {
@@ -415,6 +415,10 @@ a {
 }
 
 /* ===== */
+
+body{
+  min-width: 310px;
+}
 
 /* Top header */
 body>.header {
@@ -468,7 +472,8 @@ body>.header {
   align-self: center;
   font-size: 14.5px;
   letter-spacing: 0.7px;
-  font-family: nyt-franklin-b, helvetica, arial, sans-serif;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-weight: bold;
 }
 
 .header-left a {
@@ -491,9 +496,11 @@ body>.header {
   display: none;
 }
 
-.header-right div span {
+.header-right div > span {
   display: none
 }
+
+
 
 .header-right div a {
   margin-left: 8px;
@@ -503,27 +510,30 @@ body>.header {
   border-radius: 3px;
   color: white;
   height: 32px;
-  padding: 9px 12px;
+  padding: 8px 12px;
   box-sizing: border-box;
-  font-family: nyt-franklin-b, helvetica, arial, sans-serif;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
   font-size: 11px;
+  font-weight: bold;
 }
 
 /* === */
 
 
 /* Main body */
+
 main {
   padding-top: 43px;
-  height: 100vh;
+  padding-bottom: 50px;
   margin: auto;
 }
 
-article {
+/* Article */
+article{
   width: 100%;
-
 }
 
+/* Article Header */
 article header {
   grid-column: 1/4;
   margin-top: 45px;
@@ -565,7 +575,62 @@ header figure figcaption :nth-child(3) {
   font-size: 13px;
 }
 
+
+/* Section */
+
+
+main section{
+  width:600px;
+  margin: auto;
+  padding:0 20px;
+  box-sizing: border-box;
+}
+
+.article {
+  background-color: rgb(155, 155, 219);
+  
+}
+
+.article-top {
+  margin: 0px 0px 16px;
+}
+
+.article-author{
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: rgb(19, 19, 19);
+  margin-bottom: 15px;
+
+}
+
+.article-author a{
+  text-decoration: underline;
+  color: rgb(51, 51, 51);
+}
+
+.published-date-and-icons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.published-date-and-icons span{
+  font-size: 14px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-weight: normal;
+  color: rgb(51, 51, 51);
+}
+
+.sm-icons{
+  display: flex;
+  justify-self: center;
+  
+}
+
+/* ====== */
+
 /* ==== */
+
 
 
 /* bottom subscribe0 */
@@ -580,40 +645,7 @@ body>.subscribe {
 }
 
 /* === */
-main section{
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
-  position: relative;
-  width: 600px;
-}
-.article {
-  background-color: blue;
-  
-}
 
-.article-top {
-  display: block;
-  margin: 0px 0px 16px;
-}
-
-.published-date-and-icons {
-  background-color: brown;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-self: center;
-  align-items: center;
-}
-.sm-icons{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-self: center;
-  
-}
-.sm-icons div{
-  
-}
 
 
 /* Responsivness media query */
@@ -660,7 +692,7 @@ main section{
     display: inline;
     box-sizing: border-box;
     height: 33px;
-    padding: 9px;
+    padding: 8px;
   }
 
 
@@ -673,11 +705,15 @@ main section{
     padding: 9px;
   }
 
-  .header-right div span {
+  .header-right div > span {
     padding: 10px;
     display: inline;
     color: grey;
     font-size: 10px;
+  }
+
+  .header-right div a span {
+    display: none;
   }
 
   .header-right div a {
@@ -689,6 +725,7 @@ main section{
     color: rgb(50, 104, 145);
     font-size: 10px;
     font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: normal;
   }
 
 
@@ -711,6 +748,9 @@ main section{
 }
 
 @media only screen and (max-width: 600px) {
+  .header-center a svg{
+    height: 25px
+  }
   main header h1 {
     width: auto;
     margin: 0 20px;
@@ -720,4 +760,9 @@ main section{
   article header figure figcaption :nth-child(1) {
     font-size: 14px;
   }
+
+  main section{
+    width: 100%;
+  }
+  
 }
