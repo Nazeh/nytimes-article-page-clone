@@ -526,7 +526,7 @@ body>.header-container>.header {
 
 main {
   padding-top: 43px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   margin: auto;
 }
 
@@ -826,6 +826,48 @@ body>.subscribe {
 /* === */
 
 
+/* Footer */
+
+footer{
+  display: flex;
+  font-size: 11px;
+  padding: 10px 20px ; 
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+   border-top: 1px solid;
+   border-top-color: rgb(228, 228, 228);
+   max-width: 1200px;
+   margin:auto;
+   justify-content: center;
+}
+
+footer ul{
+  display: flex;
+}
+
+footer ul{
+  margin:0;
+  padding: 0;
+}
+
+footer :nth-child(2) li{
+  padding:0 9px;
+}
+
+
+footer ul li{
+  list-style: none;
+}
+
+footer ul li a{
+  color: rgb(151, 151, 151);
+}
+
+footer ul li a:hover{
+  text-decoration: underline;
+}
+
+/* ===== */
+
 
 /* Responsivness media query */
 
@@ -914,6 +956,7 @@ body>.subscribe {
 
   main {
     padding-top: 0;
+    padding-bottom: 55px;
   }
 
   article header figure {
@@ -937,7 +980,19 @@ body>.subscribe {
     text-align: left;
   }
 
+  footer{
+    display: block;
+  }
+
+  footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px
+  }
+
+
 }
+
 
 @media only screen and (max-width: 600px) {
   .header-center a svg {
