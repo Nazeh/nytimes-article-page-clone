@@ -532,13 +532,20 @@ main {
 
 /* Article */
 article {
+  position: relative;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr 600px 1fr;
   width: 100%;
+  margin: auto;
+  max-width: 1200px;
 }
 
 /* Article Header */
 article header {
   grid-column: 1/4;
   margin-top: 45px;
+
 }
 
 header h1 {
@@ -580,7 +587,9 @@ header figure figcaption :nth-child(3) {
 /* Section */
 
 
-main section {
+main article section {
+  grid-column: 2;
+  position: relative;
   width: 600px;
   margin: auto;
   box-sizing: border-box;
@@ -684,16 +693,17 @@ main section {
 }
 
 .article-body> .sub-img {
+  height: 0;
   position: relative;
   width: 100%;
-
+  padding-bottom: 90%;
 }
 
 .article-body .sub-img .img-grid{
-  height: 540px;
   font-size: 12px;
   position: absolute;
   top:0;
+  height: 100%;
   font-family: nyt-franklin, helvetica, arial, sans-serif;
   width:100%;
   display: grid;
@@ -748,6 +758,25 @@ main section {
 }
 
 /* ====== */
+
+
+/* Aside */
+
+
+aside {
+  width: 210px;
+
+
+}
+
+aside div{
+  width: 210px;
+  height: 500px;
+  background-color: red;
+  margin: 75px
+}
+
+/* ===== */
 
 
 /* article bottom */
@@ -876,12 +905,18 @@ footer ul li a:hover{
     width: 945px;
     margin-left: auto;
   }
-
+  aside{
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 1150px) {}
+@media only screen and (max-width: 1150px) {
+ 
+}
 
 @media only screen and (max-width: 1024px) {
+
+
   .header-container {
     position: static;
   }
