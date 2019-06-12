@@ -383,6 +383,9 @@ template {
 /* =========================================== */
 /* =========================================== */
 
+body{
+  min-width: 350px;
+}
 
 /* fonts */
 @font-face {
@@ -590,7 +593,7 @@ header figure figcaption :nth-child(3) {
 main article section {
   grid-column: 2;
   position: relative;
-  width: 600px;
+  min-width: 600px;
   margin: auto;
   box-sizing: border-box;
 }
@@ -705,7 +708,6 @@ main article section {
   top:0;
   height: 100%;
   font-family: nyt-franklin, helvetica, arial, sans-serif;
-  width:100%;
   display: grid;
   grid-template-rows: 20% auto 17% auto;
 }
@@ -871,6 +873,7 @@ footer{
 
 footer ul{
   display: flex;
+  flex-wrap: wrap;
 }
 
 footer ul{
@@ -1029,9 +1032,21 @@ footer ul li a:hover{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
+
+  .img-grid{
+  }
+
   .header-center a svg {
     height: 25px
+  }
+
+  main article{
+    display: block;
+  }
+
+  main article section {
+    min-width: auto;
   }
 
   main header h1 {
