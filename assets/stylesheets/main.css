@@ -677,6 +677,8 @@ body>.subscribe {
   margin: 0;
   position: absolute;
   width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
   text-align: center
 }
 
@@ -807,6 +809,10 @@ body>.subscribe {
     height: 55px;
   }
 
+  .subscribe .inner p{
+    text-align: left;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -831,9 +837,5 @@ body>.subscribe {
   .subscribe span {
     display: none;
   }
-  
 
-  .subscribe .inner p{
-    text-align: left;
-  }
 }
