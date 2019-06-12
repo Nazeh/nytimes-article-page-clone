@@ -643,7 +643,7 @@ main section {
   font-family: nyt-imperial, georgia, 'times new roman', times, serif;
   color: rgb(51, 51, 51);
   font-size: 20px;
-  display: block;
+  position: relative;
 }
 
 .article-body span{
@@ -662,13 +662,46 @@ main section {
   font-size: 13px;
 }
 
-.article-body .sub-image div{
-  position: absolute;
-  font-family: nyt-cheltenham,georgia,times new roman,times,serif;
-  background-image: url(https://static01.nyt.com/newsgraphics/2014/03/18/theory-of-inflation/1ebaa1b972edda0f407fbaa0e010f6b50fb6792e/inflation-720.png);
-  width:100%;
-  display: flex;
+.article-body> .sub-img {
+  position: relative;
+  width: 100%;
+
 }
+
+.article-body .sub-img .img-grid{
+  height: 540px;
+  font-size: 12px;
+  position: absolute;
+  top:0;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  width:100%;
+  display: grid;
+  grid-template-rows: 20% auto 17% auto;
+}
+
+.row-one{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  grid-row: 2;
+}
+.row-two{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  grid-row: 4;
+}
+
+.img-grid p{
+  margin: 0;
+}
+
+.img-grid p span{
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
 
 .article-body img{
   width:100%;
