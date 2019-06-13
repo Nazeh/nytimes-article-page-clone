@@ -419,6 +419,10 @@ a {
   color: black;
 }
 
+a:hover{
+  text-decoration: underline;
+}
+
 /* ===== */
 
 body {
@@ -687,12 +691,12 @@ main article section {
   font-size: 13px;
 }
 
-.caption a{
-  color: inherit;
+.article-body a{
+  color: #326891;
 }
 
-.caption a:hover{
-  text-decoration: underline;
+.caption a{
+  color: inherit;
 }
 
 .article-body> .sub-img {
@@ -712,16 +716,16 @@ main article section {
   grid-template-rows: 20% auto 17% auto;
 }
 
-.row-one{
-  display: grid;
+.article-body .sub-img .img-grid div{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
+}
+.row-one{
+  display: grid;
   grid-row: 2;
 }
 .row-two{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
   grid-row: 4;
 }
 
@@ -857,6 +861,14 @@ body>.subscribe {
 /* === */
 
 
+/* Nav */
+
+nav svg{
+  height: 13px;
+}
+
+/* ====== */
+
 /* Footer */
 
 footer{
@@ -894,9 +906,7 @@ footer ul li a{
   color: rgb(151, 151, 151);
 }
 
-footer ul li a:hover{
-  text-decoration: underline;
-}
+
 
 /* ===== */
 
@@ -1034,9 +1044,6 @@ footer ul li a:hover{
 
 @media only screen and (max-width: 640px) {
 
-  .img-grid{
-  }
-
   .header-center a svg {
     height: 25px
   }
@@ -1063,6 +1070,17 @@ footer ul li a:hover{
     width: 100%;
     padding: 0 20px;
   }
+
+  .article-body> .sub-img {
+    padding-bottom: 180%;
+  }
+
+  .article-body .sub-img .img-grid div{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-rows: 1fr . 1fr;
+  }
+
 
   .subscribe span {
     display: none;
