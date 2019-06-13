@@ -432,6 +432,10 @@ a:hover{
   text-decoration: underline;
 }
 
+section h6{
+  display: none;
+}
+
 /* ===== */
 
 body {
@@ -1238,7 +1242,7 @@ footer ul li a{
   .article-body .sub-img .img-grid div{
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
-    grid-template-rows: 1fr . 1fr;
+    grid-template-rows: 1fr  1fr;
   }
 
 
