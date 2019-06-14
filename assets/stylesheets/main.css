@@ -524,7 +524,8 @@ body>.header-container>.header {
 
 
 
-.header-right div a, .blue-button {
+.header-right div button, .blue-button {
+  
   margin-left: 8px;
   background-color: rgb(98, 136, 165);
   border: 1px solid;
@@ -869,9 +870,14 @@ aside .blue-button{
   grid-template-columns: 1fr 120px;
 }
 
+/* .article-bottom div{
+  align-items: center;
+  padding: 10px 0;
+} */
+
 .article-bottom .blue-button{
   font-size: 13px;
-  padding: 10px 100px;
+  padding: 8px 100px;
 }
 
 
@@ -935,7 +941,7 @@ body>.subscribe {
 
 
 /* Nav */
-nav {
+.site-map {
   border-top: 2px solid rgb(226, 226, 226);
   max-width: 1200px;
   margin:auto;
@@ -944,7 +950,7 @@ nav {
    
 }
 
-nav header{
+.site-map header{
   border-top: 1px solid rgb(226, 226, 226);
   height: 44px;
   padding: 10px 0;
@@ -954,28 +960,28 @@ nav header{
   justify-content: space-between;
 }
 
-nav header a{
+.site-map header a{
   color: #6288a5;
   font-size: 11px;
 
 }
 
-nav header svg{
+.site-map header svg{
   height: 24.2px;
 }
 
-nav svg{
+.site-map svg{
   height: 13px;
   margin-right: 7px;  
 }
 
-nav> div{
+.site-map> div{
   display: flex;
   justify-content: space-between;
   color: rgb(51, 51, 51);
 }
 
-nav h3{
+.site-map h3{
   text-transform: uppercase;
   color: rgb(51, 51, 51);
   font-size: 13px;
@@ -983,12 +989,12 @@ nav h3{
   height: 25px;
 }
 
-nav ul{
+.site-map ul{
   padding: 0;
   margin: 0;
 }
 
-nav ul li{
+.site-map ul li{
   text-transform: capitalize;
   font-size: 14px;
   line-height: 16px;
@@ -996,27 +1002,27 @@ nav ul li{
 
 }
 
-nav > div > div{
+.site-map > div > div{
   padding-left: 15px;
   border-left: 1px solid rgb(228, 228, 228);
 }
 
-nav div div ul li{
+.site-map div div ul li{
   font-size: 11px;
   margin-bottom: 5px;
 }
 
-nav div div ul :nth-child(3){
+.site-map div div ul :nth-child(3){
   border-bottom: 1px solid rgb(228, 228, 228);
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
-nav div div div{
+.site-map div div div{
   margin-bottom: 15px;
 }
 
-nav div div div ul li {
+.site-map div div div ul li {
   font-size: 16px;
   font-weight: bold;
   height: 25px; 
@@ -1074,17 +1080,17 @@ footer ul li a{
 }
 
 @media only screen and (max-width: 1240px) {
-  nav{
+  .site-map{
     padding: 0 20px;
   }
-  nav div{
+  .site-map div{
     display: block;
   }
-  nav section ul, nav > div div{
+  .site-map section ul, .site-map > div div{
     display: none;
   }
 
-  nav section{
+  .site-map section{
     height: 35px;
     padding-top: 10px;
     border-top: 1px solid rgb(226, 226, 226);
@@ -1149,11 +1155,11 @@ footer ul li a{
     font-size: 10px;
   }
 
-  .header-right div a span {
+  .header-right div button span {
     display: none;
   }
 
-  .header-right div a{
+  .header-right div button{
     padding: 0;
     margin: 0;
     padding: 12px 0;
@@ -1259,3 +1265,5 @@ footer ul li a{
   }
 
 }
+
+
