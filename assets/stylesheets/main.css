@@ -870,11 +870,6 @@ aside .blue-button{
   grid-template-columns: 1fr 120px;
 }
 
-/* .article-bottom div{
-  align-items: center;
-  padding: 10px 0;
-} */
-
 .article-bottom .blue-button{
   font-size: 13px;
   padding: 8px 100px;
@@ -1074,12 +1069,12 @@ footer ul li a{
     width: 945px;
     margin-left: auto;
   }
-  aside{
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 1240px) {
+  aside{
+    display: none;
+  }
   .site-map{
     padding: 0 20px;
   }
