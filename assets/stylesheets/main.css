@@ -1025,9 +1025,16 @@ body>.subscribe {
 
 /* ====== */
 
-/* Footer */
-
 footer{
+  margin-bottom: 50px;
+}
+
+
+
+
+/* .footer-bottom */
+
+.footer-bottom{
   display: flex;
   font-size: 11px;
   padding: 10px 20px ; 
@@ -1039,21 +1046,21 @@ footer{
    justify-content: center;
 }
 
-footer ul{
+.footer-bottom ul{
   display: flex;
   flex-wrap: wrap;
 }
 
-footer ul{
+.footer-bottom ul{
   margin:0;
   padding: 0;
 }
 
-footer :nth-child(2) li{
+.footer-bottom :nth-child(2) li{
   padding:0 9px;
 }
 
-footer ul li a{
+.footer-bottom ul li a{
   color: rgb(151, 151, 151);
 }
 
@@ -1193,11 +1200,11 @@ footer ul li a{
     text-align: left;
   }
 
-  footer{
+  .footer-bottom{
     display: block;
   }
 
-  footer ul{
+  .footer-bottom ul{
     display: flex;
     justify-content: center;
     margin-bottom: 10px
