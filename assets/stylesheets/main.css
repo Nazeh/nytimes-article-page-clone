@@ -387,6 +387,10 @@ body{
   min-width: 350px;
 }
 
+h6{
+  display: none;
+}
+
 /* fonts */
 @font-face {
   font-family: nyt-cheltenham;
@@ -945,7 +949,7 @@ body>.subscribe {
    
 }
 
-.site-map header{
+.site-map .footer-header{
   border-top: 1px solid rgb(226, 226, 226);
   height: 44px;
   padding: 10px 0;
@@ -955,13 +959,18 @@ body>.subscribe {
   justify-content: space-between;
 }
 
-.site-map header a{
+.site-map .footer-header a{
   color: #6288a5;
   font-size: 11px;
 
 }
 
-.site-map header svg{
+.site-map .footer-header div{
+  border: none;
+
+}
+
+.site-map .footer-header svg{
   height: 24.2px;
 }
 
